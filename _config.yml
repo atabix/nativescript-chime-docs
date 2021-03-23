@@ -9,7 +9,7 @@ description: >
    Made by <a href="https://www.atabix.com/">Atabix Solutions</a>.
 
 remote_theme: pmarsceill/just-the-docs
-theme: "just-the-docs"
+# theme: "just-the-docs"
 color_scheme: "atabix"
 
 permalink: pretty
