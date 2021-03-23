@@ -1,4 +1,27 @@
-title: "Amazon Chime NativeScript"
+title:    NativeScript Chime
+tagline:  Amazon Chime SDK for NativeScript
+version:  1.0.0
+author:   Atabix Solutions
+email:    support@atabix.com
+
+description: >
+   The NativeScript Amazon Chime SDK provides an easy-to-use interface for implementing video calling in your app.
+   Made by <a href="https://www.atabix.com/">Atabix Solutions</a>.
+
 remote_theme: pmarsceill/just-the-docs
-color_scheme: "dark"
+theme: "just-the-docs"
+color_scheme: "atabix"
+
+permalink: pretty
+
+logo: "/assets/images/logo.svg"
+
 search_enabled: true
+
+aux_links:
+  "GitHub":
+    - "//github.com/atabix/nativescript-chime"
+  "Atabix":
+    - "//atabix.nl"
+
+footer_content: "Copyright &copy; 2020-2021 <a href=\"https://atabix.nl\">Atabix Solutions</a>"
