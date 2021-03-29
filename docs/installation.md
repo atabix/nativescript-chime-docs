@@ -1,31 +1,28 @@
 ---
 layout: default
-title: Home
+title: Installation
 nav_order: 1
 description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
-permalink: /
----
-
-# NativeScript Chime
-{: .fs-9 }
-
-Build video calling, audio calling, and screen sharing applications with Amazon Chime in NativeScript.
-{: .fs-6 .fw-300 }
-
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/atabix/nativescript-chime){: .btn .fs-5 .mb-4 .mb-md-0 }
-
 ---
 
 ## Installation
 
-You can get started by installing the NPM package by running the following command.
+<div class="note">
+<b class="label">Note</b> This package is only avaialble <abbr title="Node Package Manager">NPM</abbr>. So make sure it's installed. Here is a quick <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">installation guide</a> on how to install npm.
+</div>
 
-```bash
-$ npm install @atabix/nativescript-chime
+To install this package you simply need go to your project directory and run the following command in the terminal.
+
+`npm install "@atabix/nativescript-amazon-chime`
+
+if using [typescript](https://www.typescriptlang.org/ "typescript") you can also install types by adding the following to `references.d.ts`:
+
+```js
+/// <reference path="../node_modules/@atabix/nativescript-amazon-chime/platforms/ios/objc!AmazonChimeSDK.d.ts" />
+/// <reference path="../node_modules/@atabix/nativescript-amazon-chime/platforms/android/android-amazon-chime-sdk.d.ts" />
 ```
 
-That's it! You are ready to get started.
-
+That's it! You are ready to [get started](/).
 
 ---
 
