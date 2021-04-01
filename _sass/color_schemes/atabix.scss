@@ -161,10 +161,6 @@ $media-queries: (
   line-height: 18px;
   mc-auto-number-format: '{b}Note: {/b}';
   overflow: hidden;
-  padding: 12px;
-
-  &::first-line {
-    padding: 
-  }
+  padding: 10px 4px;
 }
 

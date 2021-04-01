@@ -6,29 +6,32 @@ description: "Just the Docs is a responsive Jekyll theme with built-in search th
 ---
 
 ## What are observers?
-We call Oservers, in the most basic form, to functions that are excecuted when an event is trigger or a state changes. In our case we can use them to get information about whether someone joined or left the meeting, who is speaking or even start a live chat between participants.
+We call Observers, in the most basic form, to functions that are excecuted when an event is trigger or a state changes. In our case we can use them to get information about whether someone joined or left the meeting, who is speaking or even start a live chat between participants.
 
 ---
 ## What observers are there available?
+<br>
 **addActiveSpeakerObserver**  
 Use to detect who is speaking
 
-**addAudioVideoObserver**  
+**AudioVideoObserver**  
 Use to check the status of a session and whether or not it has started, if the connection is poor. This apply for both audio and video.
 
-**addDataMessageObserver**  
+**DataMessageObserver**  
 ????????????
 
-**addDeviceObserver**  
+**DeviceObserver**  
 Use to check when an audio device is changed (eg: internal speaker to bluetooth headphone)
 
-**addRealtimeObserver**  
+**RealtimeObserver**  
 One of the most essencial observers since it allows you to execute code when an attendee joins, leaves, becomes muted, etc.
 
-**addTileObserver**  
+**TileObserver**  
 use to execute code when an attendee starts, stop, stops sharing the video.
 
 ---
+## Adding Observers
+You can add this observers after creating an instance of a session by calling `addActiveSpeakerObserver` `addAudioVideoObserver` `addDataMessageObserver` `addDeviceObserver` `addRealtimeObserver` `addTileObserver`
 ## Removing Observers
 You can remove this observers anythime by calling `removeActiveSpeakerObserver` `removeAudioVideoObserver` `removeDataMessageObserver` `removeDeviceObserver` `removeRealtimeObserver` `removeTileObserver`
 

@@ -24,49 +24,15 @@ interface ChimeAttendeeOptions {
 }
 ```
 
-# ChimeTileObserverContract
+# ChimeDataMessage
 ```js
-export interface ChimeTileObserverContract {
-    /**
-     * Called whenever an attendee starts sharing the video.
-     *
-     * Note: this callback will be called on main thread.
-     *
-     * @param tileState: [ChimeTileState] - Video tile state associated with new attendee.
-     */
-    onVideoTileAdded: (tileState: ChimeTileState) => void;
-    /**
-     * Called whenever any attendee stops sharing the video.
-     *
-     * Note: this callback will be called on main thread.
-     *
-     * @param tileState: [ChimeTileState] - Video tile state associated with attendee who is removed.
-     */
-    onVideoTileRemoved?: (tileState: ChimeTileState) => void;
-    /**
-     * Called whenever an attendee tile pauseState changes from [VideoPauseState.Unpaused].
-     *
-     * Note: this callback will be called on main thread.
-     *
-     * @param tileState: [ChimeTileState] - Video tile state associated with attendee who is paused.
-     */
-    onVideoTilePaused?: (tileState: ChimeTileState) => void;
-    /**
-     * Called whenever an attendee tile pauseState changes to [VideoPauseState.Unpaused].
-     *
-     * Note: this callback will be called on main thread.
-     *
-     * @param tileState: [ChimeTileState] - Video tile state associated with attendee who is resumed.
-     */
-    onVideoTileResumed?: (tileState: ChimeTileState) => void;
-    /**
-     * Called whenever a video steam content size is changed
-     *
-     * Note: this callback will be called on main thread.
-     *
-     * @param tileState: [ChimeTileState] - Video tile state associated with attendee who is resumed.
-     */
-    onVideoTileSizeChanged?: (tileState: ChimeTileState) => void;
+interface ChimeDataMessage {
+    timestampMs: number;
+    topic: string;
+    data: object;
+    senderAttendeeId: string;
+    senderExternalUserId: string;
+    throttled: boolean;
 }
 ```
 
@@ -100,15 +66,35 @@ interface ChimeDataMessageObserverContract {
     onDataMessageReceived?: (message: ChimeDataMessage) => void;
 }
 ```
-
-# ChimeDataMessage
+# ChimeDeviceObserverContract
 ```js
-interface ChimeDataMessage {
-    timestampMs: number;
-    topic: string;
-    data: object;
-    senderAttendeeId: string;
-    senderExternalUserId: string;
-    throttled: boolean;
+interface ChimeDeviceObserverContract {
+    onAudioDeviceChanged?: (devices: ChimeMediaDevice[]) => void;
+}
+```
+
+
+
+# ChimeRealtimeObserverContract
+```js
+interface ChimeRealtimeObserverContract {
+    onVolumeChanged?: (volumeUpdate: ChimeVolume[]) => void;
+    onSignalStrengthChanged?: (signalUpdate: ChimeSignal[]) => void;
+    onAttendeesJoined?: (attendees: ChimeAttendeeOptions[]) => void;
+    onAttendeesLeft?: (attendees: ChimeAttendeeOptions[]) => void;
+    onAttendeesDropped?: (attendees: ChimeAttendeeOptions[]) => void;
+    onAttendeesMuted?: (attendees: ChimeAttendeeOptions[]) => void;
+    onAttendeesUnmuted?: (attendees: ChimeAttendeeOptions[]) => void;
+}
+```
+
+# ChimeTileObserverContract
+```js
+export interface ChimeTileObserverContract {
+    onVideoTileAdded: (tileState: ChimeTileState) => void;
+    onVideoTileRemoved?: (tileState: ChimeTileState) => void;
+    onVideoTilePaused?: (tileState: ChimeTileState) => void;
+    onVideoTileResumed?: (tileState: ChimeTileState) => void;
+    onVideoTileSizeChanged?: (tileState: ChimeTileState) => void;
 }
 ```

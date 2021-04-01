@@ -8,7 +8,7 @@ nav_order: 2
 
 ## What is a session?
 
-A session is where the call is going to take place, you can think of it as a conference room. In order to create one we need to call the class method [create](/docs/api/chime-session/#create)
+A session The root object of the Amazon Chime SDK for JavaScript that represents each user’s session in a meeting. The web applications start by instantiating MeetingSession and configuring it with the correct meeting and attendee information. You can think of it as a conference room. In order to create one we need to call the class method [create](/docs/api/chime-session/#create)
 
 <div class="note">
 <b class="label">Note</b> You can read more about the basics concepts by going <a href="https://docs.aws.amazon.com/chime/latest/dg/meetings-sdk.html" target="_blank">here</a></div>
@@ -41,6 +41,7 @@ meetingSession.start();
 ```js
 meetingSession.stop();
 ```
+
 
 
 ---
