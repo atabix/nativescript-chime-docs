@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Getting Started
-has_children: false
+has_children: true
 nav_order: 2
 permalink: /
 
@@ -23,20 +23,4 @@ It is currenty design to work in conjunction with [Vue.js](https://vuejs.org "Vu
 
 
 
-### First Steps
-Locate your entry file where your Vue instance is defined. (usually call index.js or main.js)
-
-```js
-new Vue()
-```
-
-and at the top of that file add
-
-```js
-import { VueAmazonChimePlugin } from '@atabix/nativescript-amazon-chime';
-```
-
-now you can access to all the available methods and vue component.
-
---
 

@@ -8,7 +8,7 @@ description: "Just the Docs is a responsive Jekyll theme with built-in search th
 ## Installation
 
 <div class="note">
-<b class="label">Note</b> This package is only avaialble <abbr title="Node Package Manager">NPM</abbr>. So make sure it's installed. Here is a quick <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">installation guide</a> on how to install npm.
+<b class="label">Note</b> This package is only avaialble <abbr title="Node Package Manager">NPM</abbr>. So make sure it's installed. Here is a quick <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">installation guide</a> on how to install npm.
 </div>
 
 To install this package you simply need go to your project directory and run the following command in the terminal.
