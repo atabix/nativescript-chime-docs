@@ -1,6 +1,6 @@
 ---
 layout: default
-title: api documentation
+title: Classes
 parent: API
 nav_order: 1
 ---
@@ -115,5 +115,54 @@ removeRealtimeObserver(): void;
 
 ```js    
 removeTileObserver(): void;
+```
+
+# ChimeSessionConfiguration
+```js
+class ChimeSessionConfiguration {
+    android: com.amazonaws.services.chime.sdk.meetings.session.MeetingSessionConfiguration;
+    ios: MeetingSessionConfiguration;
+    readonly meeting: ChimeMeeting;
+    readonly attendee: ChimeAttendee;
+    constructor(meeting: ChimeMeeting, attendee: ChimeAttendee);
+}
+```
+
+# ChimeSessionCredentials
+```js
+class ChimeSessionCredentials {
+    android: com.amazonaws.services.chime.sdk.meetings.session.MeetingSessionCredentials;
+    ios: MeetingSessionCredentials;
+    attendee: ChimeAttendee;
+    constructor(attendee: ChimeAttendee);
+    get attendeeId(): string;
+    get joinToken(): string;
+    get externalUserId(): string;
+}
+```
+
+# ChimeAudio
+```js
+class ChimeAudio extends CommonDevice {
+    mute(): void;
+    unmute(): void;
+    getDevices(): ChimeMediaDevice[];
+    setDevice(device: ChimeMediaDevice): void;
+}
+```
+
+# ChimeVideo
+```js
+class ChimeVideo extends CommonDevice {
+    bindView(view: VideoView, tile: number): void;
+    unbindView(tileId: number): void;
+    getActiveCamera(): ChimeMediaDevice;
+    switchCamera(): void;
+    startRemote(): void;
+    startLocal(): void;
+    stopRemote(): void;
+    stopLocal(): void;
+    getDevices(): ChimeMediaDevice[];
+}
 ```
 

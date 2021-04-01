@@ -12,6 +12,7 @@ A session is where the call is going to take place, you can think of it as a con
 
 <div class="note">
 <b class="label">Note</b> You can read more about the basics concepts by going <a href="https://docs.aws.amazon.com/chime/latest/dg/meetings-sdk.html" target="_blank">here</a></div>
+---
 
 ## Creating a session
 now that we now what a session is we need two things in order to create it:
@@ -28,7 +29,7 @@ We can after call the create method and we now have a session.
 ```js
 const meetingSession = ChimeSession.create(meeting, attendee);
 ```
-
+---
 ## Starting or stopping a meeting
 
 Finnaly we can start or stop a meeting with the following methods  
@@ -42,6 +43,6 @@ meetingSession.stop();
 ```
 
 
-
+---
 <div class="note">
 <b class="label">Note</b> If you want to know more about how to create an attende follow <a href="https://docs.aws.amazon.com/chime/latest/dg/creating-a-meeting.html" target="_blank">this link</a> or to create a meeting follow <a href="https://docs.aws.amazon.com/chime/latest/dg/creating-a-meeting.html" target="_blank">this one</a></div>
