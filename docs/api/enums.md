@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Interfaces
+title: Enums
 has_children: true
 parent: API
-nav_order: 3
+nav_order: 2
 ---
